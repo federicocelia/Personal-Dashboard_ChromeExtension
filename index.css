@@ -24,8 +24,12 @@ div.top {
   justify-content: space-between;
 }
 
-h1.time {
+h1.time,
+h2.date {
   text-align: center;
+}
+
+h1.time {
   font-size: 5rem;
 }
 
@@ -98,4 +102,14 @@ p.weather-temp {
 
 input::placeholder {
   color: white;
+}
+
+#github-contribution-img {
+  background-color: #ffffff;
+  padding: 1rem;
+}
+
+.bottom-container {
+  display: flex;
+  justify-content: space-between;
 }

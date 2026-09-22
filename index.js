@@ -45,13 +45,33 @@ fetch("https://api.coingecko.com/api/v3/coins/bitcoin")
 
 function getCurrentTime() {
   const date = new Date();
+
   document.getElementById("time").textContent = date.toLocaleTimeString(
-    "en-us",
-    { timeStyle: "short" },
+    "en-US",
+    {
+      timeStyle: "short",
+    },
   );
 }
 
+function getDate() {
+  const today = new Date();
+
+  document.getElementById("date").textContent = today.toLocaleDateString(
+    "en-US",
+    {
+      weekday: "long",
+      month: "long",
+      day: "numeric",
+    },
+  );
+}
+
+getCurrentTime();
+getDate();
+
 setInterval(getCurrentTime, 1000);
+setInterval(getDate, 60000);
 
 navigator.geolocation.getCurrentPosition(
   (position) => {
